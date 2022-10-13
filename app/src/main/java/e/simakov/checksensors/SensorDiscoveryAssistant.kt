@@ -26,29 +26,32 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
 
 
     companion object {
-        private const val TITLE_MAGNETOMETER = "Магнетометр"
-        private const val TITLE_ACCELEROMETER = "Акселерометр"
-        private const val TITLE_AMBIENT_TEMPERATURE = "Датчик внешней температуры"
-        private const val TITLE_GRAVITY = "Датчик гравитации"
-        private const val TITLE_GYROSCOPE = "Гироскоп"
-        private const val TITLE_LIGHT = "Датчик света"
-        private const val TITLE_LINEAR_ACCELERATOR = "Линейный акселератор"
-        private const val TITLE_MAGNETIC_FIELD = "Датчик магнитного поля"
-        private const val TITLE_TYPE_ORIENTATION = "Датчик ориентации"
-        private const val TITLE_PRESSURE = "Датчик давления"
-        private const val TITLE_PROXIMITY = "Датчик приближения"
-        private const val TITLE_RELATIVE_HUMIDITY = "Датчик влажности"
-        private const val TITLE_ROTATION_VECTOR = "Датчик направления вращения"
-        private const val TITLE_TEMPERATURE = "Датчик температуры"
+        const val TITLE_MAGNETOMETER = "Магнетометр"
+        const val TITLE_ACCELEROMETER = "Акселерометр"
+        const val TITLE_AMBIENT_TEMPERATURE = "Датчик внешней температуры"
+        const val TITLE_GRAVITY = "Датчик гравитации"
+        const val TITLE_GYROSCOPE = "Гироскоп"
+        const val TITLE_LIGHT = "Датчик света"
+        const val TITLE_LINEAR_ACCELERATOR = "Линейный акселератор"
+        const val TITLE_MAGNETIC_FIELD = "Датчик магнитного поля"
+        const val TITLE_TYPE_ORIENTATION = "Датчик ориентации"
+        const val TITLE_PRESSURE = "Датчик давления"
+        const val TITLE_PROXIMITY = "Датчик приближения"
+        const val TITLE_RELATIVE_HUMIDITY = "Датчик влажности"
+        const val TITLE_ROTATION_VECTOR = "Датчик направления вращения"
+        const val TITLE_TEMPERATURE = "Датчик температуры"
+        const val TEXT_SENSOR_THERE = "Есть"
+        const val TEXT_SENSOR_NOT_THERE = "Отсутствует"
+
     }
 
     fun checkMagnetometer(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_MAGNETIC_FIELD) != null) {
-            magnetometerMessage = "Есть"
+            magnetometerMessage = TEXT_SENSOR_THERE
             return "$TITLE_MAGNETOMETER"
         } else {
-            magnetometerMessage = "Отсутствует"
+            magnetometerMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_MAGNETOMETER"
         }
     }
@@ -56,11 +59,11 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkAccelerometer(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_ACCELEROMETER) != null) {
-            accelerometerMessage = "Есть"
+            accelerometerMessage = TEXT_SENSOR_THERE
             return "$TITLE_ACCELEROMETER"
 
         } else {
-            accelerometerMessage = "Отсутствует"
+            accelerometerMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_ACCELEROMETER"
         }
     }
@@ -68,10 +71,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkAmbientTemperature(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_AMBIENT_TEMPERATURE) != null) {
-            ambientTemperatureMessage = "Есть"
+            ambientTemperatureMessage = TEXT_SENSOR_THERE
             return "$TITLE_AMBIENT_TEMPERATURE"
         } else {
-            ambientTemperatureMessage = "Отсутствует"
+            ambientTemperatureMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_AMBIENT_TEMPERATURE"
         }
     }
@@ -79,10 +82,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkGravity(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_GRAVITY) != null) {
-            gravityMessage = "Есть"
+            gravityMessage = TEXT_SENSOR_THERE
             return "$TITLE_GRAVITY"
         } else {
-            gravityMessage = "Отсутствует"
+            gravityMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_GRAVITY"
         }
     }
@@ -90,10 +93,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkGyroscope(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_GYROSCOPE) != null) {
-            gyroscopeMessage = "Есть"
+            gyroscopeMessage = TEXT_SENSOR_THERE
             return "$TITLE_GYROSCOPE"
         } else {
-            gyroscopeMessage = "Отсутствует"
+            gyroscopeMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_GYROSCOPE"
         }
     }
@@ -101,10 +104,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkLight(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_LIGHT) != null) {
-            lightMessage = "Есть"
+            lightMessage = TEXT_SENSOR_THERE
             return "$TITLE_LIGHT"
         } else {
-            lightMessage = "Отсутствует"
+            lightMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_LIGHT"
         }
     }
@@ -112,10 +115,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkLinearAccelerator(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_LINEAR_ACCELERATION) != null) {
-            linearAcceleratorMessage = "Есть"
+            linearAcceleratorMessage = TEXT_SENSOR_THERE
             return "$TITLE_LINEAR_ACCELERATOR"
         } else {
-            linearAcceleratorMessage = "Отсутствует"
+            linearAcceleratorMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_LINEAR_ACCELERATOR"
         }
     }
@@ -123,10 +126,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkMagneticField(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_MAGNETIC_FIELD) != null) {
-            magneticFieldMessage = "Есть"
+            magneticFieldMessage = TEXT_SENSOR_THERE
             return "$TITLE_MAGNETIC_FIELD"
         } else {
-            magneticFieldMessage = "Отсутствует"
+            magneticFieldMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_MAGNETIC_FIELD"
         }
     }
@@ -134,10 +137,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkTypeOrientation(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_ORIENTATION) != null) {
-            typeOrientationMessage = "Есть"
+            typeOrientationMessage = TEXT_SENSOR_THERE
             return "$TITLE_TYPE_ORIENTATION"
         } else {
-            typeOrientationMessage = "Отсутствует"
+            typeOrientationMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_TYPE_ORIENTATION"
         }
     }
@@ -145,10 +148,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkPressure(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_PRESSURE) != null) {
-            pressureMessage = "Есть"
+            pressureMessage = TEXT_SENSOR_THERE
             return "$TITLE_PRESSURE"
         } else {
-            pressureMessage = "Отсутствует"
+            pressureMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_PRESSURE"
         }
     }
@@ -156,10 +159,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkProximity(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_PROXIMITY) != null) {
-            proximityMessage = "Есть"
+            proximityMessage = TEXT_SENSOR_THERE
             return "$TITLE_PROXIMITY"
         } else {
-            proximityMessage = "Отсутствует"
+            proximityMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_PROXIMITY"
         }
     }
@@ -167,10 +170,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkRelativeHumidity(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_RELATIVE_HUMIDITY) != null) {
-            relativeHumidityMessage = "Есть"
+            relativeHumidityMessage = TEXT_SENSOR_THERE
             return "$TITLE_RELATIVE_HUMIDITY"
         } else {
-            relativeHumidityMessage = "Отсутствует"
+            relativeHumidityMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_RELATIVE_HUMIDITY"
         }
     }
@@ -178,10 +181,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkRotationVector(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_ROTATION_VECTOR) != null) {
-            rotationVectorMessage = "Есть"
+            rotationVectorMessage = TEXT_SENSOR_THERE
             return "$TITLE_ROTATION_VECTOR"
         } else {
-            rotationVectorMessage = "Отсутствует"
+            rotationVectorMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_ROTATION_VECTOR"
         }
     }
@@ -189,10 +192,10 @@ abstract class SensorDiscoveryAssistant : AppCompatActivity() {
     fun checkTemperature(): String {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         if (sensorManager.getDefaultSensor(TYPE_TEMPERATURE) != null) {
-            temperatureMessage = "Есть"
+            temperatureMessage = TEXT_SENSOR_THERE
             return "$TITLE_TEMPERATURE"
         } else {
-            temperatureMessage = "Отсутствует"
+            temperatureMessage = TEXT_SENSOR_NOT_THERE
             return "$TITLE_TEMPERATURE"
         }
     }

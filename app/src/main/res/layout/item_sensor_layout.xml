@@ -14,22 +14,28 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/tv_last_name"
+            android:id="@+id/tv_sensor_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LastName"
+            android:text="SensorName"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/tv_first_name"
+            android:id="@+id/tv_sensor_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FirstName"
+            android:text="SensorMessage"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/more_text" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CheckSensors</string>
+    <string name="check_sensors_text">Проверить датчики</string>
+    <string name="more_text">*нажмите, чтобы узнать подробнее</string>
+</resources>

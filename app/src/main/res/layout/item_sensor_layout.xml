@@ -31,11 +31,6 @@
             android:textSize="20sp"
             android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/tv_more"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/more_text" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

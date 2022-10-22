@@ -13,6 +13,20 @@ class SensorsActivity : SensorDiscoveryAssistant() {
     lateinit var adapter: SensorAdapter
     lateinit var recyclerView: RecyclerView
 
+    val magnetometer = "magnetometer"
+    val sensorAccelerometer = "sensorAccelerometer"
+    val sensorAmbientTemperature = "sensorAmbientTemperature"
+    val sensorGravity = "sensorGravity"
+    val sensorGyroscope = "sensorGyroscope"
+    val sensorLight = "sensorLight"
+    val sensorLinearAccelerator = "sensorLinearAccelerator"
+    val sensorMagneticField = "sensorMagneticField"
+    val sensorTypeOrientation = "sensorTypeOrientation"
+    val sensorPressure = "sensorPressure"
+    val sensorProximity = "sensorProximity"
+    val sensorRelativeHumidity = "sensorRelativeHumidity"
+    val sensorRotationVector = "sensorRotationVector"
+    val sensorTemperature = "sensorTemperature"
 
     companion object {
         const val TITLE_MAGNETOMETER = "Магнетометр"
@@ -32,21 +46,20 @@ class SensorsActivity : SensorDiscoveryAssistant() {
     }
 
 
-
-var listSensors = mapOf("magnetometer" to Sensor.TYPE_MAGNETIC_FIELD,
-    "sensorAccelerometer" to Sensor.TYPE_ACCELEROMETER,
-    "sensorAmbientTemperature" to Sensor.TYPE_AMBIENT_TEMPERATURE,
-    "sensorGravity" to Sensor.TYPE_GRAVITY,
-    "sensorGyroscope" to Sensor.TYPE_GYROSCOPE,
-    "sensorLight" to Sensor.TYPE_LIGHT,
-    "sensorLinearAccelerator" to Sensor.TYPE_LINEAR_ACCELERATION,
-    "sensorMagneticField" to Sensor.TYPE_MAGNETIC_FIELD,
-    "sensorTypeOrientation" to Sensor.TYPE_ORIENTATION,
-    "sensorPressure" to Sensor.TYPE_PRESSURE,
-    "sensorProximity" to Sensor.TYPE_PROXIMITY,
-    "sensorRelativeHumidity" to Sensor.TYPE_RELATIVE_HUMIDITY,
-    "sensorRotationVector" to Sensor.TYPE_ROTATION_VECTOR,
-    "sensorTemperature" to Sensor.TYPE_TEMPERATURE)
+    var listSensors = mapOf(magnetometer to Sensor.TYPE_MAGNETIC_FIELD,
+        sensorAccelerometer to Sensor.TYPE_ACCELEROMETER,
+        sensorAmbientTemperature to Sensor.TYPE_AMBIENT_TEMPERATURE,
+        sensorGravity to Sensor.TYPE_GRAVITY,
+        sensorGyroscope to Sensor.TYPE_GYROSCOPE,
+        sensorLight to Sensor.TYPE_LIGHT,
+        sensorLinearAccelerator to Sensor.TYPE_LINEAR_ACCELERATION,
+        sensorMagneticField to Sensor.TYPE_MAGNETIC_FIELD,
+        sensorTypeOrientation to Sensor.TYPE_ORIENTATION,
+        sensorPressure to Sensor.TYPE_PRESSURE,
+        sensorProximity to Sensor.TYPE_PROXIMITY,
+        sensorRelativeHumidity to Sensor.TYPE_RELATIVE_HUMIDITY,
+        sensorRotationVector to Sensor.TYPE_ROTATION_VECTOR,
+        sensorTemperature to Sensor.TYPE_TEMPERATURE)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,20 +78,20 @@ var listSensors = mapOf("magnetometer" to Sensor.TYPE_MAGNETIC_FIELD,
     private fun myUser(): ArrayList<SensorModel>{
         val userList = ArrayList<SensorModel>()
 
-        val sensorMagnetometer = SensorModel(checkSensors(listSensors.getValue("magnetometer"), TITLE_MAGNETOMETER), sensorMessage)
-        val userAccelerometer = SensorModel(checkSensors(listSensors.getValue("sensorAccelerometer"), TITLE_ACCELEROMETER), sensorMessage)
-        val userAmbientTemperature = SensorModel(checkSensors(listSensors.getValue("sensorAmbientTemperature"), TITLE_AMBIENT_TEMPERATURE), sensorMessage)
-        val userGravity = SensorModel(checkSensors(listSensors.getValue("sensorGravity"), TITLE_GRAVITY), sensorMessage)
-        val userGyroscope = SensorModel(checkSensors(listSensors.getValue("sensorGyroscope"), TITLE_GYROSCOPE), sensorMessage)
-        val userLight = SensorModel(checkSensors(listSensors.getValue("sensorLight"), TITLE_LIGHT), sensorMessage)
-        val userLinearAccelerator = SensorModel(checkSensors(listSensors.getValue("sensorLinearAccelerator"), TITLE_LINEAR_ACCELERATOR), sensorMessage)
-        val userMagneticField = SensorModel(checkSensors(listSensors.getValue("sensorMagneticField"), TITLE_MAGNETIC_FIELD), sensorMessage)
-        val userTypeOrientation = SensorModel(checkSensors(listSensors.getValue("sensorTypeOrientation"), TITLE_TYPE_ORIENTATION), sensorMessage)
-        val userPressure = SensorModel(checkSensors(listSensors.getValue("sensorPressure"), TITLE_PRESSURE), sensorMessage)
-        val userProximity = SensorModel(checkSensors(listSensors.getValue("sensorProximity"), TITLE_PROXIMITY), sensorMessage)
-        val userRelativeHumidity = SensorModel(checkSensors(listSensors.getValue("sensorRelativeHumidity"), TITLE_RELATIVE_HUMIDITY), sensorMessage)
-        val userRotationVector = SensorModel(checkSensors(listSensors.getValue("sensorRotationVector"), TITLE_ROTATION_VECTOR), sensorMessage)
-        val sensorTemperature = SensorModel(checkSensors(listSensors.getValue("sensorTemperature"), TITLE_TEMPERATURE), sensorMessage)
+        val sensorMagnetometer = SensorModel(checkSensors(listSensors.getValue(magnetometer), TITLE_MAGNETOMETER), sensorMessage)
+        val userAccelerometer = SensorModel(checkSensors(listSensors.getValue(sensorAccelerometer), TITLE_ACCELEROMETER), sensorMessage)
+        val userAmbientTemperature = SensorModel(checkSensors(listSensors.getValue(sensorAmbientTemperature), TITLE_AMBIENT_TEMPERATURE), sensorMessage)
+        val userGravity = SensorModel(checkSensors(listSensors.getValue(sensorGravity), TITLE_GRAVITY), sensorMessage)
+        val userGyroscope = SensorModel(checkSensors(listSensors.getValue(sensorGyroscope), TITLE_GYROSCOPE), sensorMessage)
+        val userLight = SensorModel(checkSensors(listSensors.getValue(sensorLight), TITLE_LIGHT), sensorMessage)
+        val userLinearAccelerator = SensorModel(checkSensors(listSensors.getValue(sensorLinearAccelerator), TITLE_LINEAR_ACCELERATOR), sensorMessage)
+        val userMagneticField = SensorModel(checkSensors(listSensors.getValue(sensorMagneticField), TITLE_MAGNETIC_FIELD), sensorMessage)
+        val userTypeOrientation = SensorModel(checkSensors(listSensors.getValue(sensorTypeOrientation), TITLE_TYPE_ORIENTATION), sensorMessage)
+        val userPressure = SensorModel(checkSensors(listSensors.getValue(sensorPressure), TITLE_PRESSURE), sensorMessage)
+        val userProximity = SensorModel(checkSensors(listSensors.getValue(sensorProximity), TITLE_PROXIMITY), sensorMessage)
+        val userRelativeHumidity = SensorModel(checkSensors(listSensors.getValue(sensorRelativeHumidity), TITLE_RELATIVE_HUMIDITY), sensorMessage)
+        val userRotationVector = SensorModel(checkSensors(listSensors.getValue(sensorRotationVector), TITLE_ROTATION_VECTOR), sensorMessage)
+        val sensorTemperature = SensorModel(checkSensors(listSensors.getValue(sensorTemperature), TITLE_TEMPERATURE), sensorMessage)
 
         userList.add(sensorMagnetometer)
         userList.add(userAccelerometer)

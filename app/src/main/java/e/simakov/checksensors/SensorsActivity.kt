@@ -46,7 +46,7 @@ class SensorsActivity : SensorDiscoveryAssistant() {
     }
 
 
-    var listSensors = mapOf(magnetometer to Sensor.TYPE_MAGNETIC_FIELD,
+    private var listSensors = mapOf(magnetometer to Sensor.TYPE_MAGNETIC_FIELD,
         sensorAccelerometer to Sensor.TYPE_ACCELEROMETER,
         sensorAmbientTemperature to Sensor.TYPE_AMBIENT_TEMPERATURE,
         sensorGravity to Sensor.TYPE_GRAVITY,
